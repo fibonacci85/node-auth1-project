@@ -1,12 +1,12 @@
 const db = require("../../data/db-config");
 
 function find() {
- return db("users").select("id","username").orderBy("id");
+ return db("users").select("user_id","username").orderBy("user_id");
 }
 
 
 function findBy(filter) {
- return db("users").where(filter).orderBy("id");
+ return db("users").where(filter).orderBy("user_id");  
 }
 
 
@@ -15,14 +15,14 @@ function findById(user_id) {
 }
 
 
-function add(user) {
- cont [id] = await db("users").insert(user, "id");
- return findById(id);
-}
+// function add(user) {
+//  cont [id] = await db("users").insert(user, "id");
+//  return findById(id);
+// }
 
 module.exports = {
   find,
   findBy,
-  add,
+  // add,
   findById
 }
