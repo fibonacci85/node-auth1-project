@@ -15,14 +15,14 @@ function findById(user_id) {
 }
 
 
-// function add(user) {
-//  cont [id] = await db("users").insert(user, "id");
-//  return findById(id);
-// }
+async function add(user) {
+ cont [user_id] = await db("users").insert(user, "user_id");
+ return findById(user_id);
+}
 
 module.exports = {
   find,
   findBy,
-  // add,
+  add,
   findById
 }
